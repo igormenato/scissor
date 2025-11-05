@@ -1,14 +1,18 @@
-from google.adk.agents import LoopAgent, SequentialAgent
+import random
+from typing import cast
+
+from google.adk.agents import BaseAgent, LoopAgent, SequentialAgent
 
 from .sub_agents import ecomax_agent, topic_extractor_agent, veritas_agent
 
-# Create the debate loop: EcoMax and Veritas alternate posts
+# Randomize the debate order
+debate_agents = cast(list[BaseAgent], [ecomax_agent, veritas_agent])
+random.shuffle(debate_agents)
+
+# Create the debate loop: EcoMax and Veritas in random order
 debate_sequence = SequentialAgent(
     name="DebateSequence",
-    sub_agents=[
-        ecomax_agent,
-        veritas_agent,
-    ],
+    sub_agents=debate_agents,
 )
 
 # Loop the debate sequence 3 times (3 posts each = 6 total)

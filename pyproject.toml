@@ -1,9 +1,9 @@
 [project]
 name = "scissor"
 version = "0.1.0"
-description = "Scissor - The Polarization Simulator: A multi-agent system that simulates online polarization using strawman arguments and escalating rhetoric"
+description = "A multi-agent system that simulates online polarization using strawman arguments and escalating rhetoric"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.10"
 dependencies = ["google-adk>=1.17.0", "google-generativeai>=0.8.5"]
 
 [project.urls]

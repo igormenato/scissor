@@ -1,6 +1,7 @@
 """EcoMax Agent - The Optimistic Fervent Defender."""
 
 from google.adk.agents import LlmAgent
+from google.genai import types
 
 from .prompt import ECOMAX_INSTRUCTION
 
@@ -13,7 +14,9 @@ def create_ecomax_agent() -> LlmAgent:
         description="A passionate defender who sees the topic overwhelmingly positive and attacks critics",
         instruction=ECOMAX_INSTRUCTION,
         output_key="ecomax_post",
-        # Dynamic instruction processing will replace {topic} and {context}
+        generate_content_config=types.GenerateContentConfig(
+            temperature=1.2,
+        ),
     )
 
 

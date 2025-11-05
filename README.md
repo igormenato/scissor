@@ -16,7 +16,27 @@ Inspirado no ensaio ["Sort By Controversial"](https://slatestarcodex.com/2018/10
 uv sync
 ```
 
-### 2. Configure sua API key
+### 2. Ative o ambiente virtual
+
+**Bash/Zsh:**
+
+```bash
+source .venv/bin/activate
+```
+
+**Fish:**
+
+```bash
+source .venv/bin/activate.fish
+```
+
+**Windows (PowerShell):**
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+### 3. Configure sua API key
 
 Obtenha uma chave em: https://aistudio.google.com/app/api-keys
 
@@ -27,7 +47,7 @@ GOOGLE_API_KEY=SUA_CHAVE
 
 Se preferir, apenas renomeie o arquivo `.env.example` para `.env`.
 
-### 3. Execute
+### 4. Execute
 
 Via ADK Web UI (recomendado):
 
@@ -41,7 +61,7 @@ Via CLI:
 adk run scissor
 ```
 
-### 4. Inicie um debate
+### 5. Inicie um debate
 
 Digite qualquer tópico divisivo, exemplo:
 

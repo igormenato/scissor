@@ -5,7 +5,3 @@ description = "A multi-agent system that simulates online polarization using str
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = ["google-adk>=1.17.0", "google-generativeai>=0.8.5"]
-
-[project.urls]
-Homepage = "https://github.com/yourusername/scissor"
-Repository = "https://github.com/yourusername/scissor"

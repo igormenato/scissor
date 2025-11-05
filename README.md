@@ -85,8 +85,8 @@ debate_loop = LoopAgent(
 **Ajustar temperatura (criatividade):**
 
 ```python
-# scissor/sub_agents/ecomax/agent.py
-generate_content_config=GenerateContentConfig(
+# scissor/sub_agents/{agent_name}/agent.py
+generate_content_config=types.GenerateContentConfig(
     temperature=1.5,  # Padrão: 1.2 (0.0-2.0)
 )
 ```

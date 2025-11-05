@@ -1,23 +1,3 @@
-"""
-Scissor - The Polarization Simulator
-=====================================
-
-A multi-agent system that simulates online polarization by having two agents
-(EcoMax and Veritas) engage in an increasingly polarized debate where neither
-listens to the other, using strawman arguments and escalating rhetoric.
-
-Architecture:
-- TopicExtractor: Silently captures the debate topic from user input
-- LoopAgent: Orchestrates 3 iterations of back-and-forth debate (6 posts total)
-  - SequentialAgent: Ensures EcoMax and Veritas alternate turns
-    - EcoMax: Optimistic fervent defender
-    - Veritas: Skeptical fervent critic
-
-Usage:
-    adk web .
-    Then enter a divisive topic like: "Remote work is the future of productivity"
-"""
-
 from google.adk.agents import LoopAgent, SequentialAgent
 
 from .sub_agents import ecomax_agent, topic_extractor_agent, veritas_agent
